@@ -1,0 +1,18 @@
+.calculateButton {
+    margin: 0 auto;
+    padding: 10px;
+    background: green;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.calculateButton:hover {
+    cursor: pointer;
+}
+
+.calculateButton.reset {
+    background: red;
+    color: whitesmoke;
+}
