@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './Calculator.css';
+import './style.sass';
 
 
 import ValueBlock from '../../components/ValueBlock'
@@ -17,7 +17,7 @@ class Calculator extends Component {
     console.log(this.props, 'calculatorProps');
     return (
       <div className="Calculator">
-            <div className = "calcBlock">
+            <div className = "Calculator__calc-block">
                 <ValueBlock value = {this.props.value}/>
                 <ValueBlock value = {this.props.value} />
                 <ValueBlock value = {this.props.value}/>
