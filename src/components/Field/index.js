@@ -1,14 +1,17 @@
 import React, { Component } from 'react';
-import './style.css';
+import './style.sass';
 
 
 
 class Field extends Component {
 
   render() {
+    console.log(this.props, 'FieldProps')
     return (
       <div className="Field">
-        This is Field
+        <input tabIndex = "1" 
+              type = "text" placeholder = "1 000 000" 
+              className = "Field__input" />
       </div>
     );
   }

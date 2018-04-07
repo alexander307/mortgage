@@ -31,7 +31,7 @@ class App extends Component {
         <header className="App-header">
           <img src={this.props.logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Калькулятор ипотеки</h1>
-          <h5>Не будь псом, будь человеком</h5>
+          <h5>Будь не псом, но человеком</h5>
         </header>
         <div className="App-intro">
           {/* <ActivePage/> */}

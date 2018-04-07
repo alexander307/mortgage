@@ -1,0 +1,23 @@
+.Field
+    color: #696969
+    display: flex
+
+    &__input
+        border-color: darkgray
+        border-radius: 6px
+        margin: 5px 20px 5px 20px
+        text-aligin: left
+        font-size: 1em
+        padding: 10px
+        width: 60%
+        -webkit-transition: background-color,border-color 0.5s ease-out 0.25s
+        -moz-transition: background-color,border-color 0.5s ease-out 0.25s
+        -o-transition: background-color,border-color 0.5s ease-out 0.25s
+        transition: background-color,border-color 0.5s ease-out 0.25s
+
+        &:focus
+            outline-width: 0
+            background-color: whitesmoke
+            border-color: rgba(255, 200, 2, 0.7)
+            box-shadow: 1px 1px 10px rgba(255, 200, 2, 0.5)
+        

@@ -17,11 +17,10 @@ class Calculator extends Component {
     console.log(this.props, 'calculatorProps');
     return (
       <div className="Calculator">
-            This is Calculator
             <div className = "calcBlock">
-                <ValueBlock/>
-                <ValueBlock/>
-                <ValueBlock/>
+                <ValueBlock value = {this.props.value}/>
+                <ValueBlock value = {this.props.value} />
+                <ValueBlock value = {this.props.value}/>
                 <Switcher/>
                 <CalculateButton/>
             </div>
