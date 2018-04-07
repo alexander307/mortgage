@@ -6,10 +6,18 @@ class Switcher extends Component {
 
   render() {
     return (
-      <div className="Switcher">
-            This is Switcher
-      </div>
-    );
+        <div className="Switcher">
+            <label className = "Switcher__switch switch">
+              <input type = "checkbox" defaultChecked = "checked" className = "Switcher__input" />
+              <span className = "slider round Switcher__slider"></span>
+            </label>
+            <label className = "Switcher__label">
+                <span className = "Switcher__label--acive" >Аннуительный </span>
+                /
+                <span> дифференциальный </span>
+            </label>
+        </div>
+    )
   }
 }
 
