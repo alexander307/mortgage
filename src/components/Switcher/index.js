@@ -12,9 +12,9 @@ class Switcher extends Component {
               <span className = "slider round Switcher__slider"></span>
             </label>
             <label className = "Switcher__label">
-                <span className = "Switcher__label--acive" >Аннуительный </span>
+                <span>Аннуительный </span>
                 /
-                <span> дифференциальный </span>
+                <span className = "Switcher__label--acive"> дифференциальный </span>
             </label>
         </div>
     )

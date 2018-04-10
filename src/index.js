@@ -11,12 +11,12 @@ import App from './components/App'
 import registerServiceWorker from './registerServiceWorker'
 
 /* fake data */
-import initStoreData from './store/initStore';
+import CalculatorReducer from './reducers/CalculatorReducer';
 import logo from './logo.svg' //drop this govno import
 
 /* TODO init store by reducers */
 let store = createStore(
-    () => {return initStoreData}
+    CalculatorReducer
 )
 
 render(

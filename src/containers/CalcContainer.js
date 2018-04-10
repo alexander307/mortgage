@@ -1,4 +1,5 @@
 import { connect } from 'react-redux'
+import {setVal} from '../actions/CalculatorActions'
 import Calculator from '../components/Calculator'
 
 const mapStateToProps = (state) => {
@@ -8,9 +9,18 @@ const mapStateToProps = (state) => {
       calculator: state.calculator
     }
   }
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    setVal: (e) => {
+      dispatch(setVal(e))
+    }
+  }
+}
   
   const CalculatorPage = connect (
-    mapStateToProps
+    mapStateToProps,
+    mapDispatchToProps
   )(Calculator)
   
   export default CalculatorPage;

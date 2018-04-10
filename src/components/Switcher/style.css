@@ -3,6 +3,22 @@
     display: flex;
 }
 
+.Switcher__label {
+  padding: 15px 0;
+  text-align: center;
+  color: rgb(204,204,204);
+}
+
+.Switcher__label:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.Switcher__label--acive {
+  color: rgb(33,150,243);
+  text-decoration: underline;
+}
+
 .Switcher__switch {
     margin: 5px 20px 5px 20px;
     padding: 0 3px;
@@ -13,6 +29,7 @@
   position: relative;
   width: 60px;
   height: 34px;
+  margin-top: 12px;
 }
 
 

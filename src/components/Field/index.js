@@ -6,12 +6,20 @@ import './style.sass';
 class Field extends Component {
 
   render() {
-    console.log(this.props, 'FieldProps')
+    let showValue = this.props.value //.toLocaleString()
+    
+    //this.setValue.bind(this)
+    console.log(this.props.setVal, 'this')
     return (
       <div className="Field">
         <input tabIndex = "1" 
-              type = "text" placeholder = "1 000 000" 
-              className = "Field__input" />
+              type = "text"
+              value = {this.props.value} 
+              className = "Field__input" 
+              onChange = { (e) => {
+                dispatch(this.props.setVal(e.target.value))
+              } } 
+              />
       </div>
     );
   }
