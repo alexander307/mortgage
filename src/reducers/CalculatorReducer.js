@@ -9,7 +9,7 @@ export default function (state = initStore, action) {
         case SET_TOTAL_SUM:
             let newObj = Object.assign({}, state)
             newObj.calculator.total_sum.value = 10//action.total_sum;
-            console.log(action, 'action.total_sum')
+            console.log(newObj, 'action.total_sum')
             return newObj;
             break;
 

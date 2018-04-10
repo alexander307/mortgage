@@ -17,7 +17,7 @@ class Field extends Component {
               value = {this.props.value} 
               className = "Field__input" 
               onChange = { (e) => {
-                dispatch(this.props.setVal(e.target.value))
+                this.props.setVal(e.target.value)
               } } 
               />
       </div>

@@ -9,7 +9,7 @@ const mapStateToProps = (state) => {
       calculator: state.calculator
     }
   }
-
+  
 const mapDispatchToProps = (dispatch) => {
   return {
     setVal: (e) => {
