@@ -7,23 +7,28 @@ import { createStore } from 'redux'
 //ToDo real redusers
 // import { mainReducer } from './reducers' 
 
-import App from './components/App'
+import CalculatorPage from './containers/CalcContainer'
 import registerServiceWorker from './registerServiceWorker'
 
 /* fake data */
-import CalculatorReducer from './reducers/CalculatorReducer';
+import baseReducer from './reducers/CalculatorReducer';
 import logo from './logo.svg' //drop this govno import
 
-/* TODO init store by reducers */
+
+console.log(baseReducer(), 'baseResuser')
+
 let store = createStore(
-    CalculatorReducer
+    baseReducer ,
+    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 )
+
 
 render(
     <Provider store = {store} >
-        <App logo = {logo} />
+       <CalculatorPage />
     </Provider>,
     document.getElementById('root'));
     
 registerServiceWorker();
 
+console.log(store.getState(), 'getState')

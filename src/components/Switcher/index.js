@@ -2,9 +2,8 @@ import React, { Component } from 'react';
 import './style.css';
 
 
-class Switcher extends Component {
+const Switcher = (props) => {
 
-  render() {
     return (
         <div className="Switcher">
             <label className = "Switcher__switch switch">
@@ -18,7 +17,6 @@ class Switcher extends Component {
             </label>
         </div>
     )
-  }
 }
 
 export default Switcher

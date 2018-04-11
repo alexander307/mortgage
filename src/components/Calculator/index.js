@@ -2,37 +2,31 @@ import React, { Component } from 'react';
 import './style.sass';
 
 
-import ValueBlock from '../../components/ValueBlock'
+import {ValueBlock} from '../../components/ValueBlock'
 import Switcher from '../../components/Switcher'
 import CalculateButton from '../../components/CalculateButton'
 
-class Calculator extends Component {
-
-  constructor() {
-    super()
-    console.log(this.props, 'this.props from calcConstructor')
-  }
-
-  render() {
-    console.log(this.props, 'calculatorProps');
+const Calculator = (props) => {
+  
     return (
       <div className="Calculator">
             <div className = "Calculator__calc-block">
+            <p>  ---- {JSON.stringify(props.calculator.total_sum.value)}</p>
                 <ValueBlock 
-                  label = {this.props.calculator.total_sum.label} 
-                  value = {this.props.calculator.total_sum.value}
-                  setVal = {this.props.setVal}
+                  label = {props.calculator.total_sum.label} 
+                  value = {props.calculator.total_sum.value}
+                  setVal = {props.setVal}
                   />
                 <ValueBlock 
-                  label = {this.props.calculator.first_contribution.label} 
-                  value = {this.props.calculator.first_contribution.value}
-                  setVal = {this.props.setVal}
+                  label = {props.calculator.first_contribution.label} 
+                  value = {props.calculator.first_contribution.value}
+                  setVal = {props.setVal}
                 />
                 <ValueBlock 
-                  label = {this.props.calculator.term.label} 
-                  value = {this.props.calculator.term.value} 
-                  term_unit = {this.props.calculator.term.term_unit}
-                  setVal = {this.props.setVal}
+                  label = {props.calculator.term.label} 
+                  value = {props.calculator.term.value} 
+                  term_unit = {props.calculator.term.term_unit}
+                  setVal = {props.setVal}
                   />
                 <Switcher/>
                 <CalculateButton/>
@@ -42,7 +36,6 @@ class Calculator extends Component {
             </div>
       </div>
     );
-  }
 }
 
 export default Calculator

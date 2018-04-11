@@ -7,22 +7,15 @@ import Slider from '../Slider'
 
 
 
-class ValueBlock extends Component {
-  constructor() {
-    super()
-  }
+export const ValueBlock = (props) => {
 
-
-  render() {
-    console.log(this.props, 'Value Block props')
     return (
       <div className="ValueBlock">
-        <Label label = {this.props.label} />
-        <Field value = {this.props.value} setVal = {this.props.setVal}/>
-        <Slider value = {this.props.value} />
+        <Label label = {props.label} />
+        <Field value = {props.value} setVal = {props.setVal}/>
+        <Slider value = {props.value} setVal = {props.setVal} />
       </div>
     );
-  }
 }
 
 export default ValueBlock;

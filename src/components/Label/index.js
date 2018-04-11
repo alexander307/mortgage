@@ -1,16 +1,14 @@
 import React, { Component } from 'react';
 import './style.sass';
 
-class Label extends Component {
-  render() {
+const Label = (props) => {
     return (
       <div className="Label">
         <div className="Label__inner">
-          {this.props.label}
+          {props.label}
         </div>
       </div>
     );
-  }
 }
 
 export default Label;

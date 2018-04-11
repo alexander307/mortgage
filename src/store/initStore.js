@@ -1,4 +1,4 @@
-let START_DATA = {
+let initStore = {
     "active_page": "calculator", //calculator/map
     "calculator": {
         "total_sum" : {
@@ -27,4 +27,4 @@ let START_DATA = {
     "calc_result_banks": null, //null/obj
 }
 
-export default START_DATA
+export default initStore
