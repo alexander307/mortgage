@@ -20,13 +20,13 @@ const Calculator = (props) => {
                 <ValueBlock 
                   label = {props.calculator.first_contribution.label} 
                   value = {props.calculator.first_contribution.value}
-                  setVal = {props.setVal}
+                 
                 />
                 <ValueBlock 
                   label = {props.calculator.term.label} 
                   value = {props.calculator.term.value} 
                   term_unit = {props.calculator.term.term_unit}
-                  setVal = {props.setVal}
+                  
                   />
                 <Switcher/>
                 <CalculateButton/>

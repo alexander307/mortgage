@@ -1,10 +1,12 @@
 import React, { Component } from 'react'
-import './style.sass'
+//import './style.sass'
+import './style.css'
 
 const Slider = (props) => {
     console.log(props, 'slider props')
     return (
       <div className="Slider">
+      {props.value}
           <input  type="range"
                   min="0" 
                   max="5000000" 
