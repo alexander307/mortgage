@@ -4,11 +4,10 @@ import './style.sass';
 
 
 const Field = (props) => {
-    let showValue = props.value.toLocaleString()
-    
+    let showValue = parseInt(props.value).toLocaleString()
     return (
       <div className="Field">
-      {showValue}
+      {/* {typeof props.value} {showValue} {typeof showValue} */}
         <input tabIndex = "1" 
               type = "text"
               value = {showValue} 

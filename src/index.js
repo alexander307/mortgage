@@ -7,7 +7,7 @@ import { createStore } from 'redux'
 //ToDo real redusers
 // import { mainReducer } from './reducers' 
 
-import CalculatorPage from './containers/CalcContainer'
+import App from './components/App'
 import registerServiceWorker from './registerServiceWorker'
 
 /* fake data */
@@ -25,10 +25,8 @@ let store = createStore(
 
 render(
     <Provider store = {store} >
-       <CalculatorPage />
+       <App logo = {logo} />
     </Provider>,
     document.getElementById('root'));
     
 registerServiceWorker();
-
-console.log(store.getState(), 'getState')

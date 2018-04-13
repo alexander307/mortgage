@@ -1,3 +1,7 @@
+.Slider {
+  text-align: left;
+}
+
 input[type=range] {
     -webkit-appearance: none;
     margin: 0px 0px 0px 20px;
