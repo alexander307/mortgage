@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 
-import CalculatorPage from '../../containers/CalcContainer';
+import CalcContainer from '../../containers/CalcContainer';
 // import YaMap from '../Map';
 
 const App = (props) =>  {
@@ -14,7 +14,7 @@ const App = (props) =>  {
         </header>
         <div className="App-intro">
           {/* <ActivePage/> */}
-          <CalculatorPage />
+          <CalcContainer />
         </div>
       </div>
     );

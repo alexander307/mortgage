@@ -13,7 +13,9 @@ const Field = (props) => {
               value = {showValue} 
               className = "Field__input" 
               onChange = { (e) => {
-                props.setVal(parseInt(e.target.value.replace(/\s+/g,'')))
+                props.setVal({ id : props.id,  
+                                value: parseInt(e.target.value.replace(/\s+/g,''))
+                              })
               } } 
               />
       </div>

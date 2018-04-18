@@ -1,11 +1,13 @@
 import {
-    SET_TOTAL_SUM
+    SET_SUM
 } from '../constants/Calculator';
 
-export const setVal = (fieldVal, id) => {
+export const setVal = (data) => {
+    console.log(data)
     return {
-        type: SET_TOTAL_SUM,
-        total_sum: fieldVal
+        type: SET_SUM,
+        id: data.id,
+        value: data.value
     }
 }
 

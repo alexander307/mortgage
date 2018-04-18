@@ -8,12 +8,25 @@ import Slider from '../Slider'
 
 
 export const ValueBlock = (props) => {
+    let settings = props.settings
+    let settingsObj = {}
 
-    return (
+    for (let key in settings) {
+      settingsObj[key] = settings[key]
+    }
+
+    let { id, label, value, min, max } = settingsObj
+
+    return (    
       <div className="ValueBlock">
-        <Label label = {props.label} />
-        <Field value = {props.value} setVal = {props.setVal}/>
-        <Slider value = {props.value} setVal = {props.setVal} style = {{'margin-top': '-10px'}}/>
+        <Label label = {label} />
+        <Field id = {id} 
+              value = {value} 
+              setVal = {props.functions.setVal}/>
+        <Slider id = {id}
+                value = {value} 
+                setVal = {props.functions.setVal} 
+                style = {{'margin-top': '-10px'}}/>
       </div>
     );
 }

@@ -12,7 +12,7 @@ const Slider = (props) => {
                   step="100000" 
                   value= {props.value}
                   onChange = { (e) => {
-                    props.setVal(e.target.value)
+                    props.setVal({id: props.id, value: e.target.value})
                   } }
                   className = "Slider__input" />
       </div>

@@ -1,4 +1,4 @@
-export const SET_TOTAL_SUM = 'SET_TOTAL_SUM';
+export const SET_SUM = 'SET_SUM';
 // export const EDIT_FIELD = 'EDIT_FIELD';
 // export const SWITCH_PAYMENT_TYPE = 'SWITCH_PAYMENT_TYPE';
 // export const SWITCH_DATE_TYPE = 'SWITCH_DATE_TYPE';
