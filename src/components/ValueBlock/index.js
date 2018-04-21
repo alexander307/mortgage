@@ -15,15 +15,20 @@ export const ValueBlock = (props) => {
       settingsObj[key] = settings[key]
     }
 
-    let { id, label, value, min, max } = settingsObj
+    let { id, label, value, min, max, step } = settingsObj
 
     return (    
       <div className="ValueBlock">
         <Label label = {label} />
         <Field id = {id} 
+              min = {min}
+              max = {max}
               value = {value} 
               setVal = {props.functions.setVal}/>
         <Slider id = {id}
+                      min = {min}
+                      max = {max}
+                      step = {step}
                 value = {value} 
                 setVal = {props.functions.setVal} 
                 style = {{'margin-top': '-10px'}}/>

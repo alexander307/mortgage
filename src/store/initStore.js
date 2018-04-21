@@ -6,14 +6,16 @@ let initStore = {
             "label": "Сумма кредита",
             "value": 1000000,
             "min": 300000,
-            "max": 20000000
+            "max": 20000000,
+            "step": 100000
         },
         "first_contribution": {
             "id": "first_contribution",
             "label": "Первый взнос",
-            "value": 200000,
+            "value": 300000,
             "min": 300000,
-            "max": 20000000
+            "max": 10000000,
+            "step": 50000
         },
         "term" : {
             "id": "term",
@@ -21,7 +23,8 @@ let initStore = {
             "value": 12,
             "term_unit": "day", //day/month
             "min": 1,
-            "max": 120
+            "max": 120,
+            "step": 1
         },
         "type": "annuity", //annuity/differenital,
         "calc_button": "calc" //calc/reset

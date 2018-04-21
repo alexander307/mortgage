@@ -90,3 +90,20 @@ input[type=range] {
   input[type=range]:focus::-ms-fill-upper {
     background: #367ebd;
   }
+
+  .Slider__label {
+    font-size: 0.8em;
+    position: relative;
+    color: #696969;
+    display: inline-block;
+  }
+
+  .Slider__label-container {
+    margin: 0px 0px 0px 20px;
+    width: 65%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+
+ 
