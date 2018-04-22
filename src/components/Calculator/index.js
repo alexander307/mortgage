@@ -32,7 +32,10 @@ const Calculator = (props) => {
                   type = {props.calculator.type}
                   setType = {props.setType }
                   />
-                <CalculateButton/>
+                <CalculateButton 
+                    calc = {props.calculator.calc_button}
+                    calculate = {props.calculate }
+                    />
             </div>
       </div>
     );

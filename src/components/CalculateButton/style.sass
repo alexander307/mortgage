@@ -1,6 +1,7 @@
 .calculateButton
     margin: 0 auto
-    padding:  10px 20px
+    padding:  10px
+    width: 40%
     background-color: #2196F3
     border-color: #2196F3
     color: white
@@ -9,17 +10,22 @@
     padding: .8em 2em
     outline: none
     border-width: 2px 0
-    border-style: solid none
-    border-color: #2196F3 #000 #2a6292
+    border-style: solid none    // border-color: #2196F3 #000 #2a6292
+
     border-radius: 40px
-    background: linear-gradient(#2196F3, #2a6292) #2a6292;
+    // background: linear-gradient(#2196F3, #2a6292) #2a6292;
     transition: 0.2s;
 
     &:hover
         cursor: pointer
-        border-color: #FDBE33 #000 #D77206
-        background: linear-gradient(#f5ae00, #f59500) #f5ae00
+        border-color: #2a6292
+        background: #2a6292
 
     &--reset
-        background: red
-        color: whitesmoke
+        background: #d9534f
+        border-color: #d9534f
+
+        &:hover
+            background-color: #c9302c
+            border-color: #ac2925
+            

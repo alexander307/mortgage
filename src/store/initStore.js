@@ -1,5 +1,4 @@
 let initStore = {
-    "active_page": "calculator", //calculator/map
     "calculator": {
         "total_sum" : {
             "id": "total_sum",
@@ -47,7 +46,6 @@ let initStore = {
         "calc_button": "calc" //calc/reset
     },
     "calc_result_table": null, //null/obj
-    "calc_result_banks": null, //null/obj
 } 
 
 export default initStore

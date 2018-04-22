@@ -1,7 +1,8 @@
 import {
     SET_SUM,
     SET_TERM_UNIT,
-    SET_TYPE
+    SET_TYPE,
+    CALCULATE
 } from '../constants/Calculator';
 
 export const setVal = (data) => {
@@ -27,4 +28,10 @@ export const setType = (data) => {
     }
 }
 
-
+export const calculate = (data) => {
+    console.log(data, 'data from calculate')
+    return {
+        type: CALCULATE,
+        value: data.value
+    }
+}
