@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import { connect } from 'react-redux'
-import {setVal} from '../actions/CalculatorActions'
+import {setVal, switchTermUnit, setType } from '../actions/CalculatorActions'
 import Calculator from '../components/Calculator'
 
 class CalculatorPage extends Component {
@@ -28,6 +28,12 @@ const mapDispatchToProps = (dispatch) => {
   return {
     setVal: (e) => {
       dispatch(setVal(e))
+    },
+    switchTermUnit: (e) => {
+      dispatch(switchTermUnit(e))
+    },
+    setType: (e) => {
+      dispatch(setType(e))
     }
   }
 }

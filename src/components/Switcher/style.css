@@ -3,10 +3,16 @@
     display: flex;
 }
 
-.Switcher__label {
-  padding: 15px 0;
+.Switcher__label-wrap {
+  padding: 15px 0px;
   text-align: center;
-  color: rgb(204,204,204);
+}
+.SmallSwitcher__label--annuity {
+  color: rgb(29, 170, 135);
+}
+
+.SmallSwitcher__label--differenital {
+  color: rgb(33,150,243);;
 }
 
 .Switcher__label:hover {
@@ -15,7 +21,6 @@
 }
 
 .Switcher__label--acive {
-  color: rgb(33,150,243);
   text-decoration: underline;
 }
 
@@ -42,7 +47,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ccc;
+  background-color: rgb(29, 170, 135);
   -webkit-transition: .4s;
   transition: .4s;
 }

@@ -1,6 +1,3 @@
-export const SET_SUM = 'SET_SUM';
-// export const EDIT_FIELD = 'EDIT_FIELD';
-// export const SWITCH_PAYMENT_TYPE = 'SWITCH_PAYMENT_TYPE';
-// export const SWITCH_DATE_TYPE = 'SWITCH_DATE_TYPE';
-// export const CALCULATE_MORTGAGE = 'CALCULATE_MORTGAGE';
-// export const CLEAR_CALCULATION_RESULT = 'CLEAR_CALCULATION_RESULT';
+export const SET_SUM = 'SET_SUM'
+export const SET_TERM_UNIT = 'SET_TERM_UNIT'
+export const SET_TYPE = 'SET_TYPE'

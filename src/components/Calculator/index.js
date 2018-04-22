@@ -11,23 +11,28 @@ const Calculator = (props) => {
     return (
       <div className="Calculator">
             <div className = "Calculator__calc-block">
+            {/* {JSON.stringify(props.calculator)} */}
                 <ValueBlock 
                   settings = {props.calculator.total_sum} 
-                  functions = {{setVal: props.setVal}}
+                  functions = {{setVal: props.setVal, switchTermUnit: props.switchTermUnit}}
                   />
                 <ValueBlock 
                   settings = {props.calculator.first_contribution} 
-                  functions = {{setVal: props.setVal}}
+                  functions = {{setVal: props.setVal, switchTermUnit: props.switchTermUnit}}
                 />
                 <ValueBlock 
                   settings = {props.calculator.term} 
-                  functions = {{setVal: props.setVal}}
+                  functions = {{setVal: props.setVal, switchTermUnit: props.switchTermUnit}}
                   />
-                <Switcher/>
+                  <ValueBlock 
+                  settings = {props.calculator.percent} 
+                  functions = {{setVal: props.setVal, switchTermUnit: props.switchTermUnit}}
+                  />
+                <Switcher 
+                  type = {props.calculator.type}
+                  setType = {props.setType }
+                  />
                 <CalculateButton/>
-            </div>
-            <div className = "mapBlock">
-                mapBlock
             </div>
       </div>
     );

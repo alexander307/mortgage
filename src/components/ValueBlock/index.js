@@ -4,7 +4,7 @@ import './style.sass';
 import Label from '../Label'
 import Field from '../Field'
 import Slider from '../Slider' 
-
+import SmallSwitcher from '../SmallSwitcher'
 
 
 export const ValueBlock = (props) => {
@@ -15,15 +15,27 @@ export const ValueBlock = (props) => {
       settingsObj[key] = settings[key]
     }
 
-    let { id, label, value, min, max, step } = settingsObj
+    let { id, label, value, min, max, step, hasSwitcher, termUnit, divide } = settingsObj
+
 
     return (    
       <div className="ValueBlock">
-        <Label label = {label} />
+
+        <div className="ValueBlock__top-elems-wrapper">
+          <Label label = {label} />
+          {hasSwitcher &&
+             <SmallSwitcher
+                id = {id}
+                termUnit = {termUnit} 
+                switchTermUnit = {props.functions.switchTermUnit}
+             /> }
+        </div>
+
         <Field id = {id} 
               min = {min}
               max = {max}
               value = {value} 
+              divide = {divide} 
               setVal = {props.functions.setVal}/>
         <Slider id = {id}
                       min = {min}

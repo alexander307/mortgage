@@ -15,8 +15,6 @@ import baseReducer from './reducers/CalculatorReducer';
 import logo from './logo.svg' //drop this govno import
 
 
-console.log(baseReducer(), 'baseResuser')
-
 let store = createStore(
     baseReducer ,
     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
