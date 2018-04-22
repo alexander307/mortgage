@@ -35,7 +35,7 @@ let initStore = {
             "id": "percent",
             "label": "Процентная ставка",
             "value": 7,
-            "termUnit": "year", //month/year
+            "termUnit": "month", //month/year
             "min": 1,
             "max": 20,
             "step": 0.1,
