@@ -5,39 +5,49 @@ import './style.sass';
 import {ValueBlock} from '../../components/ValueBlock'
 import Switcher from '../../components/Switcher'
 import CalculateButton from '../../components/CalculateButton'
+import ResultBlock from '../../components/ResultBlock'
+import ResultTable from '../ResultTable';
 
 const Calculator = (props) => {
   
     return (
-      <div className="Calculator">
-            <div className = "Calculator__calc-block">
-            {/* {JSON.stringify(props.calculator)} */}
-                <ValueBlock 
-                  settings = {props.calculator.total_sum} 
-                  functions = {{setVal: props.setVal, switchTermUnit: props.switchTermUnit}}
-                  />
-                <ValueBlock 
-                  settings = {props.calculator.first_contribution} 
-                  functions = {{setVal: props.setVal, switchTermUnit: props.switchTermUnit}}
-                />
-                <ValueBlock 
-                  settings = {props.calculator.term} 
-                  functions = {{setVal: props.setVal, switchTermUnit: props.switchTermUnit}}
+      <div>
+        <div className="Calculator">
+              <div className = "Calculator__calc-block">
+              {/* {JSON.stringify(props.calculator)} */}
+                  <ValueBlock 
+                    settings = {props.calculator.total_sum} 
+                    functions = {{setVal: props.setVal, switchTermUnit: props.switchTermUnit}}
+                    />
+                  <ValueBlock 
+                    settings = {props.calculator.first_contribution} 
+                    functions = {{setVal: props.setVal, switchTermUnit: props.switchTermUnit}}
                   />
                   <ValueBlock 
-                  settings = {props.calculator.percent} 
-                  functions = {{setVal: props.setVal, switchTermUnit: props.switchTermUnit}}
-                  />
-                <Switcher 
-                  type = {props.calculator.type}
-                  setType = {props.setType }
-                  />
-                <CalculateButton 
-                    calc = {props.calculator.calc_button}
-                    calculate = {props.calculate }
+                    settings = {props.calculator.term} 
+                    functions = {{setVal: props.setVal, switchTermUnit: props.switchTermUnit}}
                     />
-            </div>
+                    <ValueBlock 
+                    settings = {props.calculator.percent} 
+                    functions = {{setVal: props.setVal, switchTermUnit: props.switchTermUnit}}
+                    />
+                  <Switcher 
+                    type = {props.calculator.type}
+                    setType = {props.setType }
+                    />
+                  <CalculateButton 
+                      calc = {props.calculator.calc_button}
+                      calculate = {props.calculate }
+                      />
+              </div>
+              <div className = "Calculator__results">
+                <ResultBlock />
+              </div>
+              <ResultTable/>
+        </div>
+
       </div>
+
     );
 }
 

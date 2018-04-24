@@ -27,7 +27,7 @@ const calc = new Calculator({
     percentUnit: 'month'
 })
 
- console.log(calc.calcDifferential())
+ //console.log(calc.calcDifferential())
 
 //console.log(calc. calcAnnuity ())
 

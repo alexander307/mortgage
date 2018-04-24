@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-//import './style.sass'
 import './style.css'
 
 const Slider = (props) => {

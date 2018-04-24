@@ -1,0 +1,51 @@
+.resultTable
+    margin: 20px auto
+    border-radius: 10px
+    font-size: 0.8em
+    text-align: center
+    width: 80%
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .3), -23px 0 20px -23px rgba(0, 0, 0, .8),23px 0 20px -23px rgba(0, 0, 0, .8),0 0 40px rgba(0, 0, 0, .1) inset
+    
+
+    &__head
+        color: whitesmoke
+        .resultTable__row:first-child
+            border-top-left-radius: 10px
+            border-top-right-radius: 10px
+        .resultTable__cell:first-child
+            border-top-left-radius: 10px
+        .resultTable__cell:last-child
+            border-top-right-radius: 10px
+        div
+            background: rgb(29, 170, 135)
+    &__footer
+        color: whitesmoke
+        .resultTable__row:first-child
+            border-bottom-left-radius: 10px
+            border-bottom-right-radius: 10px
+        .resultTable__cell:first-child
+            border-bottom-left-radius: 10px
+        .resultTable__cell:last-child
+            border-bottom-right-radius: 10px
+        div
+            background: rgb(29, 170, 135)
+    &__row  
+        display: flex
+        justify-content: space-around
+
+        &:nth-child(2n)
+            background: #696969
+        &:nth-child(2n+1)
+            background: #2196F3
+
+    &__cell
+        border: 1px white solid
+        text-align:center
+        width: 20%
+        overflow-wrap: break-word;  /* не поддерживает IE, Firefox; является копией word-wrap */ 
+        word-wrap: break-word;
+        word-break: break-all;  /* не поддерживает Opera12.14, значение keep-all не поддерживается IE, Chrome */ 
+        line-break: strict;  /* нет поддержки для русского языка */ 
+        -webkit-hyphens: auto; -ms-hyphens: auto; hyphens: auto;  /* значение auto не поддерживается Chrome */ 
+        padding: 0.3em 0.2em
+    &__cell
