@@ -15,9 +15,6 @@ export default class Calculator {
         const formulaPercent = percent / 12
         const periodsCount = this.termUnit ==='month'?this.term:12*this.term
 
-        
-        console.log(total_sum, percent, periodsCount)
-
         let remain = total_sum
 
         let result = {}
@@ -31,10 +28,10 @@ export default class Calculator {
             remain = remain - mainDebt
 
             result[i] = {
-                id : i + 1,
-                monthResult: monthResult.toFixed(2),
-                mainDebt: mainDebt.toFixed(2),
-                percents: percents.toFixed(2),
+                id : i + 1, //номер платежа
+                paySum: monthResult.toFixed(2), //сумма платежа
+                mainDebt: mainDebt.toFixed(2), //основной долг
+                accruedInterests: percents.toFixed(2), //начисленные проценты
                 remain: remain  < 0.1? 0: remain.toFixed(2)
 
             }
@@ -61,15 +58,12 @@ export default class Calculator {
             let monthResult = this.calcDiffMonth(remain, percent)
             remain = remain - mainDebt
             result[i] = {
-                id: i + 1,
-                debt: remain.toFixed(2),
-                monthResult: monthResult.toFixed(2),
-                mainDebt: mainDebt.toFixed(2),
-                paySum: (mainDebt + monthResult).toFixed(2)
+                id: i + 1, //номер платежа
+                paySum: (mainDebt + monthResult).toFixed(2), //сумма платежа
+                mainDebt: mainDebt.toFixed(2), //основной долг
+                accruedInterests: monthResult.toFixed(2),
+                remain: remain  < 0.1? 0: remain.toFixed(2)
             }
-
-            
-
         }
         return result
     }

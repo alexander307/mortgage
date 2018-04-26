@@ -5,6 +5,7 @@ import {
     SET_TYPE,
     CALCULATE
 } from '../constants/Calculator';
+import Calculator from "../classes/Caclulator";
 
 
 const baseReducer = (state = initStore, action) => {
@@ -28,7 +29,30 @@ const baseReducer = (state = initStore, action) => {
             case CALCULATE:
                 console.log(action.value, 'value from reducer')
                 newObj.calculator.calc_button = action.value
-                newObj.calc_result_table =  action.value ==='reset'?'ne null':null
+
+                if (action.value === 'reset') {
+
+                    const calc = new Calculator({
+                        total_sum: state.calculator.total_sum.value,
+                        first_deposit: state.calculator.first_contribution.value,
+                        term: state.calculator.term.value,
+                        termUnit: state.calculator.term.termUnit,
+                        percent: state.calculator.percent.value,
+                        percentUnit: state.calculator.percent.termUnit
+                    })
+
+                    let calcResult
+
+                    if (state.type === 'annuity') {
+                        calcResult = calc.calcAnnuity()
+                    } else {
+                        calcResult = calc.calcDifferential()
+                    }
+                    newObj.calc_result_table =  calcResult
+                } else {
+                    newObj.calc_result_table = null;
+                }
+
                 break
 
             default:
