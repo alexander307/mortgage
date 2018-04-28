@@ -50,7 +50,7 @@ const baseReducer = (state = initStore, action) => {
                     }
                     newObj.calc_result_table =  calcResult
                 } else {
-                    newObj.calc_result_table = null;
+                    newObj.calc_result_table = [];
                 }
 
                 break

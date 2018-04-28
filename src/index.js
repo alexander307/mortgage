@@ -17,21 +17,6 @@ import logo from './logo.svg' //drop this govno import
 
 import Calculator from './classes/Caclulator'
 
-
-const calc = new Calculator({
-    total_sum: 1000,
-    first_deposit: 300000,
-    term: 12,
-    termUnit: 'month',
-    percent: 20,
-    percentUnit: 'month'
-})
-
-console.log(calc.calcDifferential())
-
-console.log(calc. calcAnnuity ())
-
-
 let store = createStore(
     baseReducer ,
     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()

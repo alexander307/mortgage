@@ -40,10 +40,17 @@ const Calculator = (props) => {
                       calculate = {props.calculate }
                       />
               </div>
-              <div className = "Calculator__results">
-                <ResultBlock />
-              </div>
-              <ResultTable/>
+            {
+                props.calc_result_table != false &&
+                <div>
+                    <div className = "Calculator__results">
+                        <ResultBlock />
+                    </div>
+                    <ResultTable calcTable = {props.calc_result_table}/>
+                </div>
+            }
+
+
         </div>
 
       </div>

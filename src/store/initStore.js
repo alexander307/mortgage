@@ -45,7 +45,7 @@ let initStore = {
         "type": "annuity", //annuity/differenital,
         "calc_button": "calc" //calc/reset
     },
-    "calc_result_table": null, //null/obj
+    "calc_result_table": [], //null/obj
 } 
 
 export default initStore

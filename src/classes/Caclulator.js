@@ -17,7 +17,7 @@ export default class Calculator {
 
         let remain = total_sum
 
-        let result = {}
+        let result = []
 
         const monthResult = total_sum * (formulaPercent + formulaPercent/(Math.pow(1+ formulaPercent, periodsCount) - 1))
 
@@ -52,7 +52,7 @@ export default class Calculator {
 
         let remain = total_sum
 
-        let result = {}
+        let result = []
 
         for (let i = 0; i < periodsCount; i++) {
             let monthResult = this.calcDiffMonth(remain, percent)
